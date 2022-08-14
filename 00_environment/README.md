@@ -6,7 +6,7 @@
 
 1. 第一步创建新的虚拟机。
 
-   <img src="img\00_1.png" alt="00_1" style="zoom:67%;" />
+   <img src="img\00_1.png" alt="00_1" width="50%" height="50%" />
 
 2. 选择自定义（高级）。
 
@@ -68,35 +68,35 @@
 
 1. 编辑虚拟机设置
 
-   <img src="img\01_1.png" alt="01_1"  />
+   <img src="img\01_1.png" alt="01_1" width="67%" height="67%"  />
 
 2. 选择已经下载好的操作系统ISO映像文件。
 
-   <img src="img\01_2.png" alt="01_2" style="zoom:67%;" />
+   <img src="img\01_2.png" alt="01_2" width="67%" height="67%" />
 
 3. 保存后开启此虚拟机，之后选择安装Ubuntu。
 
-   <img src="img\01_5.png" alt="01_5" style="zoom:80%;" />
+   <img src="img\01_5.png" alt="01_5" width="67%" height="67%" />
 
 4. 键盘布局选择Chinese并继续。
 
-   <img src="img\01_6.png" alt="01_6" style="zoom:80%;" />
+   <img src="img\01_6.png" alt="01_6" width="67%" height="67%" />
 
 5. 这里选择了最小安装。
 
-   <img src="img\01_7.png" alt="01_7" style="zoom:80%;" />
+   <img src="img\01_7.png" alt="01_7" width="67%" height="67%" />
 
 6. 选择安装类型为清除整个磁盘并安装Ubuntu，然后点击Install Now。
 
-   <img src="img\01_8.png" alt="01_8" style="zoom:80%;" />
+   <img src="img\01_8.png" alt="01_8" width="67%" height="67%" />
 
 7. 确认安装。
 
-   <img src="img\01_9.png" alt="01_9" style="zoom:80%;" />
+   <img src="img\01_9.png" alt="01_9" width="67%" height="67%" />
 
 8. 输入个人信息，然后Continue。
 
-   <img src="img\01_10.png" alt="01_10" style="zoom:80%;" />
+   <img src="img\01_10.png" alt="01_10" width="67%" height="67%" />
 
 9. 安装完成后重启。
 
@@ -104,37 +104,37 @@
 
 1. 修改虚拟网络编辑器配置。
 
-   <img src="img\02_1.png" alt="02_1" style="zoom:80%;" />
+   <img src="img\02_1.png" alt="02_1" width="80%" height="80%" />
 
    选择Vmnet8 Net网络连接方式，随意设置子网IP，点击NAT设置页面。
 
-   <img src="img\02_2.png" alt="02_2" style="zoom:80%;" />
+   <img src="img\02_2.png" alt="02_2" width="80%" height="80%" />
 
    设置子网掩码和网关，后续使用。
 
-   <img src="img\02_3.png" alt="02_3" style="zoom:80%;" />
+   <img src="img\02_3.png" alt="02_3" width="80%" height="80%" />
 
    设置起始和结束IP地址。
 
-   <img src="img\02_8.png" alt="02_8" style="zoom:80%;" />
+   <img src="img\02_8.png" alt="02_8" width="80%" height="80%" />
 
    修改虚拟机网络适配器为VMnet8（NAT模式）。
 
-   <img src="img\02_7.png" alt="02_7" style="zoom:80%;" />
+   <img src="img\02_7.png" alt="02_7" width="80%" height="80%" />
 
 2. 修改宿主机VMnet8网卡设置。
 
-   <img src="img\02_4.png" alt="02_4" style="zoom:80%;" />
+   <img src="img\02_4.png" alt="02_4" width="80%" height="80%" />
 
 3. 修改虚拟机静态IP。
 
-   <img src="img\02_5.png" alt="02_5" style="zoom:80%;" />
+   <img src="img\02_5.png" alt="02_5" width="67%" height="67%" />
 
    <img src="img\02_6.png" alt="02_6" style="zoom:80%;" />
 
 4. 重启网络服务。测试可以ping通网络和主机。
 
-   <img src="img\02_9.png" alt="02_9" style="zoom:80%;" />
+   <img src="img\02_9.png" alt="02_9" width="80%" height="80%" />
 
 ### 1.4 更换阿里云源
 
@@ -186,21 +186,21 @@ sudo service ssh start
 
 ### 2.2 安装Remote-SSH插件
 
-<img src="img\03_1.png" alt="03_1" style="zoom:80%;" />
+<img src="img\03_1.png" alt="03_1" width="67%" height="67%" />
 
 ### 2.3 配置Remote-SSH
 
 使用快捷键`Ctrl+Shift+p`打开面板，输入ssh，选择Remote-SSH:Settings。
 
-<img src="img\03_2.png" alt="03_2" style="zoom:80%;" />
+<img src="img\03_2.png" alt="03_2" width="80%" height="80%" />
 
 找到并勾选`Always reveal the SSH login terminal`选项。
 
-<img src="img\03_3.png" alt="03_3" style="zoom:80%;" />
+<img src="img\03_3.png" alt="03_3" width="80%" height="80%" />
 
 填写config文件。
 
-<img src="img\03_4.png" alt="03_4" style="zoom:80%;" />
+<img src="img\03_4.png" alt="03_4" width="80%" height="80%" />
 
 在打开的配置文件中填入如下内容：
 
@@ -215,11 +215,11 @@ Host ubuntu
 
 点击SSH TARGETS下服务器的按钮进行连接，按照提示输入密码。
 
-<img src="img\03_5.png" alt="03_5" style="zoom:80%;" />
+<img src="img\03_5.png" alt="03_5" width="80%" height="80%" />
 
 连接后即可打开新的终端和文件夹作为工作区。
 
-<img src="img\03_6.png" alt="03_6" style="zoom:80%;" />
+<img src="img\03_6.png" alt="03_6" width="80%" height="80%" />
 
 
 
