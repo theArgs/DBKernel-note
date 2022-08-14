@@ -104,23 +104,23 @@
 
 1. 修改虚拟网络编辑器配置。
 
-   <img src="img\02_1.png" alt="02_1" width="80%" height="80%" />
+   <img src="img\02_1.png" alt="02_1" width="67%" height="67%" />
 
    选择Vmnet8 Net网络连接方式，随意设置子网IP，点击NAT设置页面。
 
-   <img src="img\02_2.png" alt="02_2" width="80%" height="80%" />
+   <img src="img\02_2.png" alt="02_2" width="67%" height="67%" />
 
    设置子网掩码和网关，后续使用。
 
-   <img src="img\02_3.png" alt="02_3" width="80%" height="80%" />
+   <img src="img\02_3.png" alt="02_3" width="67%" height="67%" />
 
    设置起始和结束IP地址。
 
-   <img src="img\02_8.png" alt="02_8" width="80%" height="80%" />
+   <img src="img\02_8.png" alt="02_8" width="67%" height="67%" />
 
    修改虚拟机网络适配器为VMnet8（NAT模式）。
 
-   <img src="img\02_7.png" alt="02_7" width="80%" height="80%" />
+   <img src="img\02_7.png" alt="02_7" width="67%" height="67%" />
 
 2. 修改宿主机VMnet8网卡设置。
 
@@ -128,9 +128,9 @@
 
 3. 修改虚拟机静态IP。
 
-   <img src="img\02_5.png" alt="02_5" width="67%" height="67%" />
+   <img src="img\02_5.png" alt="02_5" width="50%" height="50%" />
 
-   <img src="img\02_6.png" alt="02_6" style="zoom:80%;" />
+   <img src="img\02_6.png" alt="02_6" width="67%" height="67%" />
 
 4. 重启网络服务。测试可以ping通网络和主机。
 
