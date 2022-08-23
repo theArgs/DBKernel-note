@@ -221,6 +221,47 @@ Host ubuntu
 
 <img src="img\03_6.png" alt="03_6" width="80%" height="80%" />
 
+## 3 其他环境
+
+### 3.1 编译工具
+
+``` shell
+sudo apt-get install build-essential
+```
+
+### 3.2 安装make
+
+``` shell
+sudo apt-get install make
+```
+
+### 3.3 安装cmake
+
+``` shell
+sudo apt-get install cmake
+```
+
+### 3.4 安装git
+
+``` shell
+sudo apt-get install git
+```
+
+### 3.5 安装GoogleTest
+
+``` shell
+git clone https://github.com/google/googletest.git -b release-1.12.0
+cd googletest        # Main directory of the cloned repository.
+mkdir build          # Create a directory to hold the build output.
+cd build
+cmake .. -DBUILD_GMOCK=OFF
+
+make
+sudo make install    # Install in /usr/local/ by default
+```
+
+
+
 
 
 
