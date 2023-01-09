@@ -3,7 +3,7 @@ project(AP)
 
 set(CMAKE_CXX_STANDARD 20)
 
-find_package(OpenSSL REQUIRED)
+find_package(OpenSSL 1.1 REQUIRED)
 find_package(GTest REQUIRED)
 
 include_directories(include/)

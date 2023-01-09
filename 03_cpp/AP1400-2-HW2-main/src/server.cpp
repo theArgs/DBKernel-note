@@ -1,7 +1,11 @@
 #include "server.h"
 
+#include "crypto.h"
+
 #include <iostream>
 #include <random>
+
+std::vector<std::string> pending_trxs;
 
 void show_wallets(const Server &server) {
   std::cout << std::string(20, '*') << std::endl;
@@ -64,4 +68,51 @@ bool Server::parse_trx(const std::string &trx,
   receiver = trx.substr(idx1 + 1, idx2 - idx1 - 1);
   value = std::stod(trx.substr(idx2 + 1));
   return true;
+}
+
+bool Server::add_pending_trx(std::string trx, std::string signature) const {
+  std::string sender, receiver;
+  double value;
+  parse_trx(trx, sender, receiver, value);
+  bool authentic = crypto::verifySignature(get_client(sender)->get_publickey(),
+      trx, signature);
+  if (!authentic || get_wallet(sender) < value) {
+    return false;
+  }
+  pending_trxs.push_back(trx);
+  return true;
+}
+
+size_t Server::mine() {
+  std::string mempool;
+  for (auto &t : pending_trxs) {
+    mempool += t;
+  }
+  if (mempool.empty()) {
+    return -1;
+  }
+  size_t idx = 0;
+  size_t nonce;
+  std::string sender, receiver;
+  double value;
+  while (true) {
+    parse_trx(pending_trxs[idx], sender, receiver, value);
+    nonce = get_client(sender)->generate_nonce();
+    std::string hash = crypto::sha256(mempool + std::to_string(nonce));
+    if (hash.substr(0, 10).find("000") != std::string::npos) {
+      break;
+    }
+    idx = (idx + 1) % pending_trxs.size();
+  }
+
+  std::cout << sender << std::endl;
+  clients[get_client(sender)] += 6.25;
+  for (auto &t : pending_trxs) {
+    parse_trx(t, sender, receiver, value);
+
+    clients[get_client(sender)] -= value;
+    clients[get_client(receiver)] += value;
+  }
+  pending_trxs.clear();
+  return nonce;
 }

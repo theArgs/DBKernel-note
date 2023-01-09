@@ -90,7 +90,6 @@ TEST(HW1Test, TEST11) {
     EXPECT_THROW(Server::parse_trx("sarah-clay_0.5", sender, receiver, value), std::runtime_error);
 }
 
-/*
 TEST(HW1Test, TEST12) {
     Server server{};
     auto bryan{server.add_client("bryan")};
@@ -148,7 +147,6 @@ TEST(HW1Test, TEST15) {
     EXPECT_TRUE(clint->get_wallet()==3.5 ||clint->get_wallet()==3.5 ||clint->get_wallet()==9.75);
     EXPECT_TRUE(sarah->get_wallet()==13.25 || sarah->get_wallet()==7 || sarah->get_wallet()==7);
 }
-*/
 
 
 
