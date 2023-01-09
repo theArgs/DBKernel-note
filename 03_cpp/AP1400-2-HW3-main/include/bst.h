@@ -2,6 +2,7 @@
 #define BST_H
 
 #include <functional>
+#include <initializer_list>
 #include <iostream>
 
 class BST {
@@ -29,6 +30,18 @@ class BST {
   Node **find_parrent(int value);
   Node **find_successor(int value);
   bool delete_node(int value);
+
+  BST();
+  BST(const BST &bst);
+  BST(BST &&bst);
+  BST(std::initializer_list<int> values);
+  ~BST();
+
+  BST &operator=(const BST &bst);
+  BST &operator=(BST &&bst);
+
+  BST &operator++();
+  BST operator++(int);
 
  private:
   Node *root;

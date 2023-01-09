@@ -146,7 +146,6 @@ TEST(HW3Test, TEST11) {
     std::cout << bst << std::endl;
 }
 
-/*
 TEST(HW3Test, TEST12) {
     BST bst{};
     bst.add_node(25);
@@ -391,6 +390,8 @@ TEST(HW3Test, TEST24) {
     bst.add_node(10);
     bst.add_node(50);
     BST copy{bst};
+
+    EXPECT_EQ(bst.length(), 3);
     EXPECT_EQ(bst.length(), copy.length());
     EXPECT_EQ(bst.get_root()->right->value, copy.get_root()->right->value);
 }
@@ -465,6 +466,7 @@ TEST(HW3Test, TEST29) {
     EXPECT_EQ(bst2.length(), 10);
 }
 
+
 TEST(HW3Test, TEST30) {
     BST bst{5, 1, 10, 2, 8, 50, 4, 60};
     BST bst2{++bst};
@@ -490,7 +492,7 @@ TEST(HW3Test, TEST31) {
     for(size_t i{}; i < values1.size(); i++)
         EXPECT_EQ(values2[i], values1[i]-1);    
 }
-*/
+
 
 
 
