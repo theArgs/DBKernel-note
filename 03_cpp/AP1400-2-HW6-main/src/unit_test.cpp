@@ -64,7 +64,7 @@ TEST(HW6Test, TEST6) {
     EXPECT_EQ(patients[30].name, "Jane Wyman");
     EXPECT_EQ(patients[58].name, "Joan Crawford");
 }
-/*
+
 TEST(HW6Test, TEST7) {
     auto flights = q3::gather_flights("flights.txt");
 
@@ -78,6 +78,7 @@ TEST(HW6Test, TEST7) {
     EXPECT_EQ(flight_numbers, correct);
 }
 
+/*
 TEST(HW6Test, TEST8) {
     std::vector<q4::Sensor> sensors{{{0, 0.01}, 0.5},
                                 {{0.5, 0.009}, 0.2}};
